@@ -36,3 +36,15 @@ Here are hyperparameters used in for the training:
 * `e_greedy_decay` - parameters used for exponential epsilon calculation.
 * `double` - specifies if secondary target network is used.
 * `dueling` - specifies if dueling network is constructed to learning.
+
+## Ideas for possible future agent's performance improvement
+
+Here are some ideas that could be investigated or implmented:
+* Try new algorithms or improve existing. This solution proposes 2 new improvements: Double and Dueling Networks. These techniques showed significant improvements in performance.
+* Experiment with hyperparameters:
+    * try tweaking epsilon decay rate and its range;
+    * apply learning rate schedule (like in classic machine learning). For example, Sutton's textbook proposes "Selecting Step-Size Parameters Manually" technique in section 9.6.
+    * play with neural network architecture (depth) and different activation functions (Tanh)
+    * increasing experience replay buffer size showed to affect performance. This task is in continuous state space, so increase buffer capacity might help to improve the performance.
+* When testing a trained model it is obvious, that even though an agent gathers yellow bananas and tries to avoid blue, it is still a bit "uncertain" and "shy" in its movements. Maybe try increasing solve score or train on more epochs without waiting for a certain average score.
+ 
